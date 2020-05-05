@@ -24,8 +24,10 @@ app.get('/weather/get', (req, res) => {
 });
 
 app.post('/webhook', (req, res) => {
-    console.log("Received post request");
-    console.log(req.query);
+    console.log("Received post request, req body is ..");
+    console.log(req.body);
+    console.log("Received post request, req query is ..");
+    //console.log(req.query);
     console.log(req.query['geo-city']);
 
     var city=unescape(req.query['geo-city']);
