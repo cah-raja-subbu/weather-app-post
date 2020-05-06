@@ -26,9 +26,9 @@ app.get('/weather/get', (req, res) => {
 app.post('/webhook', (req, res) => {
     console.log("Received post request, reqq body is ..");
     console.log(req.body);
-    //var city=req.body.queryResult.parameters['geo-city'];
-    //var city=req.body.geocity; // this works
-    var city=req.body['geo-city'];
+    var city=req.body.queryResult.parameters['geo-city'];
+    //var city=req.body.geocity; 
+    //var city=req.body['geo-city']
     console.log("Received post request, reqq query is ..");
     //console.log(req.query);
     //console.log(req.query['geo-city']);
